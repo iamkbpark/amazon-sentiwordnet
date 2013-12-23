@@ -1,4 +1,6 @@
-data <- read.csv('/Users/rmaestre/Projects/amazon-datasets/data/output/results.tsv', header=TRUE, sep="\t")
+library(ggplot2)
+
+data <- read.csv('/Users/rmaestre/Projects/amazon-sentiwordnet/data/output/results.tsv', header=TRUE, sep="\t")
 
 
 p1 <- ggplot(data, aes(x = pos)) + geom_density() + ylim(c(0.0,2.7)) + ggtitle("Positive labeled")
