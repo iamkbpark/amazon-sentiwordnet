@@ -39,4 +39,6 @@ Pictures below show the labeled annotation distribution of each sentiword
 
 
 
+![Labeled distribution](https://raw.github.com/rmaestre/amazon-sentiwordnet/master/images/word_labeled_dist.jpg?token=145687__eyJzY29wZSI6IlJhd0Jsb2I6cm1hZXN0cmUvYW1hem9uLXNlbnRpd29yZG5ldC9tYXN0ZXIvaW1hZ2VzL3dvcmRfbGFiZWxlZF9kaXN0LmpwZyIsImV4cGlyZXMiOjEzODg0MTc2MTZ9--3f2e8016d671a25bd75603132bc4f8edc8480535 "Labeled distribution")
+
 
