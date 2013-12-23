@@ -58,11 +58,11 @@ Pictures below show the labeled annotation distribution of each sentiword. We ca
 
 To perform the analysis, we calculate the frecuency of each sentiword in each review clasifying each review as a vector with one label from 1.0 to 5.0 (the common rating). E.g.: the probability to find the sentiword "limited" (with +0.0 and -0.325 score manual labels) in each band label is the follow one:
 
-*   p("limited"|1.0)=0.12456344586728754
-*   p("limited"|2.0)=0.13736903376018628
-*   p("limited"|3.0)=0.15366705471478465
-*   p("limited"|4.0)=0.30151338766006985
-*   p("limited"|5.0)=0.2828870779976717
+*   p(limited|1.0)=0.12456344586728754
+*   p(limited|2.0)=0.13736903376018628
+*   p(limited|3.0)=0.15366705471478465
+*   p(limited|4.0)=0.30151338766006985
+*   p(limited|5.0)=0.2828870779976717
 
 
 In order to visualize the relation between the annotated score of Sentiwordnet and the probability to find the word in a determinate review label, we print below the each relationship between "neg" and "pos" values and review labels.
@@ -89,5 +89,7 @@ Thus, picture below shows the previous random sampling.
  
 Future work and improvements
 ===================
-* Working in n-grams (n=2) in order to define context and word; i.e.: in the hotel domain, the word cold has not the same polarity of you are talking bout the hotel staff or the drink in the room.
-* Improve the extended Sentiwordnet
+* Working in n-grams (n=2) in order to define context and word; i.e.: in the hotel domain, the word cold has not the same polarity of you are talking bout the hotel staff or the drink in the room. Better precision, worst recall.
+* Improve the recall of the extended Sentiwordnet
+* Compare the main [Sentiwordnet](http://sentiwordnet.isti.cnr.it/ "Sentiwordnet") with a domain specific one
+
