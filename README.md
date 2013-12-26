@@ -2,9 +2,9 @@ Extended Sentiwordnet analysis of Amazon review Datasets
 ===================
 
 We use an extended and manually annotated Sentiwordnet with a specific domain (electronics) to analyse the Amazon reviews dataset.
-A copy of the Amazon dataset can be downloaded from the  [Stanford Large Network Dataset Collection](http://snap.stanford.edu/data/web-Amazon.html "Snap"), the extended Sentowordnet annotated dataset can be downloaded from this repository for further testing.
+A copy of the Amazon dataset can be downloaded from the  [Stanford Large Network Dataset Collection](http://snap.stanford.edu/data/web-Amazon.html "Snap"), the extended Sentiwordnet annotated dataset can be downloaded from this repository for further testing.
 
-The Amazon reviews dataset has the next distribution of reviews attached of one of the next labels:
+The Amazon dataset provides the next distribution of reviews attached of one of the next labels:
 
  * 1.0:  14675
  * 2.0:  7566
@@ -20,7 +20,7 @@ The matchings distribution of Sentiwordnets are:
  * 4.0: 93482 
  * 5.0: 126337
 
-Once we have process the Amazon Datasets linking reviews, label reviews (from 1.0 to 5.0) and manual positive and negative scores from extended Sentiwordnet (from 0.0 to 1.0), we can summarize the result dataset
+Once we have processed the Amazon Dataset linking reviews, label reviews (from 1.0 to 5.0) and manual positive and negative scores from extended Sentiwordnet (from 0.0 to 1.0), we can summarize the result dataset
 
 ```R
 
@@ -44,7 +44,7 @@ Once we have process the Amazon Datasets linking reviews, label reviews (from 1.
 
 ```
 
-Pictures below show the labeled annotation distribution of each sentiword. We can see two main distributions near 0.0 and near 0.5 because each word has a negative and positive score annotation, e.g.: "limited" has +0.0 and -0.325.
+Pictures below show the label annotation distribution of each sentiword. We can see two main distributions near 0.0 and near 0.5 because each word has a negative and positive score annotation, e.g.: "good" has +0.75 and -0.0.
 
 ```
 > p1 <- ggplot(data, aes(x = pos)) + geom_density() + ylim(c(0.0,2.7)) + ggtitle("Positive labeled")
@@ -56,13 +56,13 @@ Pictures below show the labeled annotation distribution of each sentiword. We ca
 ![Labeled distribution](https://raw.github.com/rmaestre/amazon-sentiwordnet/master/images/word_labeled_dist.jpg?token=145687__eyJzY29wZSI6IlJhd0Jsb2I6cm1hZXN0cmUvYW1hem9uLXNlbnRpd29yZG5ldC9tYXN0ZXIvaW1hZ2VzL3dvcmRfbGFiZWxlZF9kaXN0LmpwZyIsImV4cGlyZXMiOjEzODg0MTc2MTZ9--3f2e8016d671a25bd75603132bc4f8edc8480535 "Labeled distribution")
 
 
-To perform the analysis, we calculate the frecuency of each sentiword in each review clasifying each review as a vector with one label from 1.0 to 5.0 (the common rating). E.g.: the probability to find the sentiword "limited" (with +0.0 and -0.325 score manual labels) in each band label is the follow one:
+To perform the analysis, we calculate the frecuency of each sentiword in each review clasifying each review as a vector with one label from 1.0 to 5.0 (the common rating). E.g.: the probability to find the sentiword "good" (with +0.75 and -0.0 score manual labels) in each band label is the follow one:
 
-*   p(limited|1.0)=0.12456344586728754
-*   p(limited|2.0)=0.13736903376018628
-*   p(limited|3.0)=0.15366705471478465
-*   p(limited|4.0)=0.30151338766006985
-*   p(limited|5.0)=0.2828870779976717
+*   p(good|1.0)=0.08954758190327614
+*   p(good|2.0)=0.0892702374761657
+*   p(good|3.0)=0.14120298145259144
+*   p(good|4.0)=0.34130698561275785
+*   p(good|5.0)=0.3386722135552089
 
 
 In order to visualize the relation between the annotated score of Sentiwordnet and the probability to find the word in a determinate review label, we print below the each relationship between "neg" and "pos" values and review labels.
@@ -71,7 +71,7 @@ In order to visualize the relation between the annotated score of Sentiwordnet a
 
 Therefore, we can see a positive correlation line betweem X1 and "neg" and X5 and "pos" as well as negative correlation between X1 and "pos" and X5 and "neg".
 
-In order, to create a random distribution to compare results, we create a Random Sentiwordnet
+We also create a Random Sentiwordnet in order to test the null correlation between review scores and the random Sentiwordnet.
 
 ```python
 if np.random.uniform(0,1) > 0.5:
@@ -91,5 +91,3 @@ Future work and improvements
 ===================
 * Working in n-grams (n=2) in order to define context and word; i.e.: in the hotel domain, the word cold has not the same polarity of you are talking bout the hotel staff or the drink in the room. Better precision, worst recall.
 * Improve the recall of the extended Sentiwordnet
-* Compare the main [Sentiwordnet](http://sentiwordnet.isti.cnr.it/ "Sentiwordnet") with a domain specific one
-
