@@ -53,7 +53,7 @@ Pictures below show the label annotation distribution of each sentiword. We can 
 ```
 
 
-![Labeled distribution](https://raw.github.com/rmaestre/amazon-sentiwordnet/master/images/word_labeled_dist.jpg?token=145687__eyJzY29wZSI6IlJhd0Jsb2I6cm1hZXN0cmUvYW1hem9uLXNlbnRpd29yZG5ldC9tYXN0ZXIvaW1hZ2VzL3dvcmRfbGFiZWxlZF9kaXN0LmpwZyIsImV4cGlyZXMiOjEzODg0MTc2MTZ9--3f2e8016d671a25bd75603132bc4f8edc8480535 "Labeled distribution")
+![Labeled distribution](https://raw.github.com/rmaestre/amazon-sentiwordnet/master/images/word_labeled_dist.jpg "Labeled distribution")
 
 
 To perform the analysis, we calculate the frecuency of each sentiword in each review clasifying each review as a vector with one label from 1.0 to 5.0 (the common rating). E.g.: the probability to find the sentiword "good" (with +0.75 and -0.0 score manual labels) in each band label is the follow one:
@@ -67,7 +67,7 @@ To perform the analysis, we calculate the frecuency of each sentiword in each re
 
 In order to visualize the relation between the annotated score of Sentiwordnet and the probability to find the word in a determinate review label, we print below the each relationship between "neg" and "pos" values and review labels.
 
-![Correlation](https://raw.github.com/rmaestre/amazon-sentiwordnet/master/images/correlation_word_label.jpg?token=145687__eyJzY29wZSI6IlJhd0Jsb2I6cm1hZXN0cmUvYW1hem9uLXNlbnRpd29yZG5ldC9tYXN0ZXIvaW1hZ2VzL2NvcnJlbGF0aW9uX3dvcmRfbGFiZWwuanBnIiwiZXhwaXJlcyI6MTM4ODQxOTEwM30%3D--a826cb9530f29fdaefa63766862b5b836172874c "Correlation")
+![Correlation](https://raw.github.com/rmaestre/amazon-sentiwordnet/master/images/correlation_word_label.jpg "Correlation")
 
 Therefore, we can see a positive correlation line betweem X1 and "neg" and X5 and "pos" as well as negative correlation between X1 and "pos" and X5 and "neg".
 
@@ -84,7 +84,7 @@ else:
 
 Thus, picture below shows the previous random sampling.
 
-![Random test](https://raw.github.com/rmaestre/amazon-sentiwordnet/master/images/random_test.jpg?token=145687__eyJzY29wZSI6IlJhd0Jsb2I6cm1hZXN0cmUvYW1hem9uLXNlbnRpd29yZG5ldC9tYXN0ZXIvaW1hZ2VzL3JhbmRvbV90ZXN0LmpwZyIsImV4cGlyZXMiOjEzODg0MTk5OTF9--49e176cf0454f308e34d08a4338467b30b885283 "Random test")
+![Random test](https://raw.github.com/rmaestre/amazon-sentiwordnet/master/images/random_test.jpg "Random test")
  
  
 Future work and improvements
